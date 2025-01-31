@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@silbia/foo/(.*)": "<rootDir>/../libs/foo/src/$1",
+    "@silbia/foo": "<rootDir>/../libs/foo/src",
+    "@silbia/bar/(.*)": "<rootDir>/../libs/bar/src/$1",
+    "@silbia/bar": "<rootDir>/../libs/bar/src"
+  }
+}
