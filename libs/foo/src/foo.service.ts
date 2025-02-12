@@ -1,9 +1,12 @@
-import { Injectable } from '@nestjs/common';
-import { FooEnum } from './types';
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class FooService {
-  constructor() {
-    console.log(FooEnum.Foo);
+  constructor(@Inject('CONFIG_OPTIONS') private config: { app: string }) {
+    console.log(`API Key: ${this.config.app}`);
+  }
+
+  getFoo() {
+    return `Foo with API Key: ${this.config.app}`;
   }
 }

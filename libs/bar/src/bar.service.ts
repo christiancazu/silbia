@@ -9,5 +9,6 @@ export class BarService {
     };
 
     console.warn(abc);
+    console.warn(process.env.APP);
   }
 }
